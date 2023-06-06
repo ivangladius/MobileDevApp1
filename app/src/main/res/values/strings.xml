@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">A Beautiful Mind</string>
+    <string name="nash">Nash</string>
+    <string name="catious">Cautious</string>
+    <string name="greedy">Greedy</string>
+    <string name="random">Random</string>
+    <string name="radio_button_hint">Select Opponnent Type:</string>
+    <string name="restart_button">Start Over!</string>
+    <string name="userScoreHeading">My\nScore</string>
+    <string name="opponentScoreHeading">Opponent\nScore</string>
+    <string name="userScore">0</string>
+    <string name="opponentScore">0</string>
+    <string name="generate_game">Generate Game!</string>
+    <string name="number_of_games_played_0">Number of Games Played: 0</string>
+    <string name="game_prompt">Now, it\'s your game ...</string>
+    <string name="strategy_hint">Your opponent plays according to this strategy:</string>
+    <string name="player_A">A</string>
+    <string name="player_B">B</string>
+    <string name="tableHint">Hint: All returns are given in the form x/y, where x specifies the reward for you, \nand gives the reward for your opponent.\nHint: My action is specified by the row. The opponent\'s action is given by the\ncolumn.</string>
+    <string name="button_choose_b">CHOOSE\nACTION B</string>
+    <string name="button_choose_a">CHOOSE\nACTION A</string>
+    <string name="result_heading">Result:</string>
+</resources>

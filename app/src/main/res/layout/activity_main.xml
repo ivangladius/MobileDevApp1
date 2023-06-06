@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainConstraintLayout"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/tvNumberGames"
+        android:layout_width="306dp"
+        android:layout_height="24dp"
+        android:text="@string/number_of_games_played_0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.152"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.039" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNumberGames"
+        app:layout_constraintVertical_bias="0.039">
+
+        <TableRow
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvUserScoreHeading"
+                android:layout_width="90dp"
+                android:layout_height="55dp"
+                android:layout_column="0"
+                android:background="@color/colorUserScoreHeading"
+                android:gravity="center"
+                android:text="@string/userScoreHeading"
+                android:textColor="@color/black"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/tvOpponentScoreHeading"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_column="1"
+                android:background="@color/colorOpponentScoreHeading"
+                android:gravity="center"
+                android:lineBreakStyle="normal"
+                android:text="@string/opponentScoreHeading"
+                android:textColor="@color/black"
+                android:textSize="22sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="0dp"
+            android:layout_height="44dp">
+
+            <TextView
+                android:id="@+id/tvUserScore"
+                android:layout_width="41dp"
+                android:layout_height="40dp"
+                android:layout_column="0"
+                android:background="@color/colorUserScoreNumber"
+                android:gravity="center"
+                android:text="@string/userScore"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/tvOpponentScore"
+                android:layout_width="41dp"
+                android:layout_height="40dp"
+                android:layout_column="0"
+                android:background="@color/colorOpponentScoreNumber"
+                android:gravity="center"
+                android:text="@string/userScore"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="28sp" />
+
+        </TableRow>
+
+    </TableLayout>
+
+
+    <Button
+        android:id="@+id/buttonGenerateGame"
+        android:layout_width="175dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/mybutton"
+        android:text="@string/generate_game"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/radioButtonHint"
+        android:layout_width="178dp"
+        android:layout_height="31dp"
+        android:layout_marginBottom="312dp"
+        android:gravity="center"
+        android:text="@string/radio_button_hint"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonGenerateGame"
+        app:layout_constraintVertical_bias="0.365" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="107dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioButtonHint"
+        app:layout_constraintVertical_bias="0.056">
+
+        <RadioButton
+            android:id="@+id/radioRandom"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/random"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:id="@+id/radioGreedy"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/greedy"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:id="@+id/radioCautious"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/catious"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:id="@+id/radioNash"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/nash"
+            android:onClick="onRadioButtonClicked"/>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonStartOver"
+        android:layout_width="125dp"
+        android:layout_height="48dp"
+        android:background="@drawable/mybutton"
+        android:text="@string/restart_button"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonGenerateGame"
+        app:layout_constraintVertical_bias="0.851" />
+
+    <ImageView
+        android:id="@+id/imageNash"
+        android:layout_width="165dp"
+        android:layout_height="183dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.727"
+        app:srcCompat="@drawable/nash"
+        android:visibility="invisible"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

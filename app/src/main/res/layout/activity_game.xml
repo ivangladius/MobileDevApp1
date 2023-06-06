@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameActivity">
+
+    <TextView
+        android:id="@+id/tvGamePrompt"
+        android:layout_width="317dp"
+        android:layout_height="79dp"
+        android:gravity="center"
+        android:text="@string/game_prompt"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024" />
+
+    <TextView
+        android:id="@+id/tvStrategyHint"
+        android:layout_width="347dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="388dp"
+        android:gravity="center"
+        android:text="@string/strategy_hint"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvGamePrompt"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvStrategy"
+        android:layout_width="241dp"
+        android:layout_height="23dp"
+        android:layout_marginBottom="288dp"
+        android:gravity="center"
+        android:text=""
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvStrategyHint"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TableLayout
+        android:id="@+id/tableLayout2"
+        android:layout_width="366dp"
+        android:layout_height="120dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvStrategy"
+        app:layout_constraintVertical_bias="0.07">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvDummy"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/tvTopA"
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorPlayerA"
+                android:gravity="center"
+                android:text="@string/player_A"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvTopB"
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorPlayerB"
+                android:gravity="center"
+                android:text="@string/player_B"
+                android:textSize="18sp" />
+
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/Gray" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvLeftA"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:background="@color/colorPlayerA"
+                android:gravity="center"
+                android:text="@string/player_A"
+                android:textSize="18sp" />
+
+
+            <TextView
+                android:id="@+id/tvOption00"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="3 / 4"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvOption01"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="-1 / 4"
+                android:textSize="18sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvLeftB"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:background="@color/colorPlayerB"
+                android:gravity="center"
+                android:text="@string/player_B"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvOption10"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="8 / -4"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvOption11"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="5 / 7"
+                android:textSize="18sp" />
+
+        </TableRow>
+
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/tvTableHint"
+        android:layout_width="391dp"
+        android:layout_height="47dp"
+        android:gravity="center"
+        android:text="@string/tableHint"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout2"
+        app:layout_constraintVertical_bias="0.017" />
+
+    <Button
+        android:id="@+id/buttonActionB"
+        android:layout_width="115dp"
+        android:layout_height="48dp"
+        android:background="@drawable/mybutton"
+        android:text="@string/button_choose_b"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.783"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.598" />
+
+    <Button
+        android:id="@+id/buttonActionA"
+        android:layout_width="115dp"
+        android:layout_height="48dp"
+        android:background="@drawable/mybutton"
+        android:text="@string/button_choose_a"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.253"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.598" />
+
+    <Button
+        android:id="@+id/buttonDismiss"
+        android:layout_width="115dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="36dp"
+        android:background="@drawable/mybutton"
+        android:text="DISMISS"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="362dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTableHint"
+        app:layout_constraintVertical_bias="0.626">
+
+        <TextView
+            android:id="@+id/tvResultHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="@string/result_heading" />
+
+        <TextView
+            android:id="@+id/tvYouChoose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="You chose: Action _" />
+
+        <TextView
+            android:id="@+id/tvOppChoose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Opponent chose: Action _" />
+
+        <TextView
+            android:id="@+id/tvYouObtain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="You obtain: _ points" />
+
+        <TextView
+            android:id="@+id/tvOppObtain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Opponent obtains: _ points" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
